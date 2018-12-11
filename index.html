@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+</head>
+<body>
+		
+
+	
+	<div id="root">
+		
+		<!-- <input type="text" id="input" v-model="data">
+		<p>{{data}}</p>
+
+		<p v-for="name in names" v-text="name"></p>
+		<input type="text" v-model="value">
+		<button @click="add">Add</button>
+		<button :disabled="disabled" @click="toggle">just button</button> -->
+
+	</div>
+	
+
+	<div id="root2">
+		<!-- <todolist></todolist> -->
+	</div>
+
+  	<div class="container" id="message"> 
+	<!-- 	<bulma-message title="Hello world" body="some message"></bulma-message>
+		<bulma-message title="Hello ocean" body="some message"></bulma-message> -->
+	</div>
+
+	<div id="modal">
+		<!-- <modal v-show="showModal" @close-modal="closeModal">bla bla bla</modal> -->
+	</div>
+
+	<div id="tabs">
+		<!-- <tabs>
+			<tab name="About us" :selected="true">
+				<p>Some information about us</p>
+			</tab>
+			<tab name="About you">
+				<p>Some information about you</p>
+			</tab>
+			<tab name="About me">
+				<p>Some information about me</p>
+			</tab>
+		</tabs> -->
+	</div>
+
+	<div id="coupon">
+		<coupon></coupon>
+	</div>
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="todo.js"></script>
+	<script src="message.js"></script>
+	<script src="modal.js"></script>
+	<script src="tabs.js"></script>
+	<script src="coupon.js"></script>
+	<script>
+	
+
+	new Vue({
+		el: '#root',
+		data: {
+			data:"message",
+			value: '',
+			names: ["a", "b", "c"],
+			disabled:false
+			},
+		methods: {
+			add:function(){
+				console.log(this.value);
+				this.names.push(this.value);
+				this.value=''
+			},
+			toggle (){
+				this.disabled=true;
+			}
+		}
+	})
+
+
+	</script>
+
+
+</body>
+</html>
