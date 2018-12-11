@@ -53,6 +53,18 @@
 	<div id="coupon">
 		<coupon></coupon>
 	</div>
+	
+	<div id="inline">
+		<progress-view inline-template>	
+			<div>
+				<div>progress is {{percent}}%</div>
+				<button @click="percent+=5">+me</button>
+			</div>
+		</progress-view>
+			
+		
+	</div>
+	
 
 
 
@@ -62,6 +74,7 @@
 	<script src="modal.js"></script>
 	<script src="tabs.js"></script>
 	<script src="coupon.js"></script>
+	<script src="inline.js"></script>
 	<script>
 	
 
